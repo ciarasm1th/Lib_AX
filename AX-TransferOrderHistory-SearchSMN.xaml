@@ -1,0 +1,345 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Component_Main" this:Component_Main.in_strTransferOrderHistoryURL="https://ax.production.carberyfoodingredients.com/namespaces/AXSF/?cmp=CFI&amp;mi=InventTransferJour" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_strSMN" Type="InArgument(x:String)" />
+    <x:Property Name="in_strTransferOrderHistoryURL" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Component_Main.in_strSMN>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:Component_Main.in_strSMN>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>730.4,2901.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Component_Template_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Component Description:&#xA;&#xA;&#xA;Arguments:&#xA;in_strLocations&#xA;in_strSMN&#xA;out_bolMatches&#xA;&#xA;PreCondition:&#xA;PostCondition:&#xA;" DisplayName="Component Main" sap:VirtualizedContainerService.HintSize="516.8,2836.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="AX-TransferOrderHistory-CheckIfLocationMatches" Name="strComponentName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Start Message" sap:VirtualizedContainerService.HintSize="475.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Starting Component: &quot; + strComponentName]" />
+    <Sequence DisplayName="Arguments In Check" sap:VirtualizedContainerService.HintSize="475.2,145.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If Condition="[not(string.IsNullOrEmpty(in_strSMN))]" DisplayName="Check Argument In" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Argument in is populated sequence" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message in argument is populated" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;in_strSMN Argument is populated&quot;]" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Argument in is not populated sequence" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Throw DisplayName="Throw exception for argument is not populated" Exception="[new Exception(&quot;in_strSMN  is not populated&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_5" />
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
+    <Sequence DisplayName="PreCondition Check" sap:VirtualizedContainerService.HintSize="475.2,68.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State for PreCondition" sap:VirtualizedContainerService.HintSize="677.6,405.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="20" Version="V1">
+        <uix:NCheckState.IfExists>
+          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="375.2,187.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message - on starting screen" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;PreCondition is met. Transfer order history on screen&quot;]" />
+          </Sequence>
+        </uix:NCheckState.IfExists>
+        <uix:NCheckState.IfNotExists>
+          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="249.6,116.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Throw DisplayName="Throw exception - precondiiton not met" Exception="[new Exception(&quot;PreCondition not met. Transfer order history NOT on screen&quot;)]" sap:VirtualizedContainerService.HintSize="208,22.4" sap2010:WorkflowViewState.IdRef="Throw_3" />
+          </Sequence>
+        </uix:NCheckState.IfNotExists>
+        <uix:NCheckState.Target>
+          <uix:TargetAnchorable BrowserURL="https://ax.production.carberyfoodingredients.com/namespaces/AXSF/?cmp=CFI&amp;mi=InventTransferJour" DesignTimeRectangle="142, 287, 1742, 42" ElementType="Text" FriendlyName="'Transfer order history'" FullSelectorArgument="&lt;webctrl parentid='form_3_0' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='form_3_0' tag='H1' type='' class='formCaption' aaname='Transfer order history' check:innerText='Transfer order history' /&gt;" Guid="7ad322b0-dcff-44fa-93e1-e44ad175d4cb" ImageBase64="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" InformativeScreenshot="492d67b8aef07e4898bc7d5bd1d4df84.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Transfer order history -- Finance and Operations' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+        </uix:NCheckState.Target>
+      </uix:NCheckState>
+    </Sequence>
+    <Sequence DisplayName="Component Actions" sap:VirtualizedContainerService.HintSize="475.2,1239.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Transfer'" sap:VirtualizedContainerService.HintSize="433.6,1146.4" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="8c187098175a9df11629005c98018661" Selector="&lt;html app='chrome.exe' title='Transfer order history -- Finance and Operations' /&gt;">
+        <ui:BrowserScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,999.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_2">
+                <ui:Hover.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Hover.CursorPosition>
+                <ui:Hover.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6bf023c-29a2-48b1-934a-fe338604a589" InformativeScreenshot="96de142a5c74a9f7a71031145d89bf33" Selector="&lt;webctrl parentid='InventTransferJour_TransferId_3_0_header' tag='DIV' aaname='Transfer number' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Hover.Target>
+              </ui:Hover>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Transfer number'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="21302f82-c71e-44bb-b2b3-6a5a626975c9" InformativeScreenshot="101ad3b49e47070de5ccac66d68be8fb" Selector="&lt;webctrl id='InventTransferJour_TransferId_3_0_header' tag='DIV' innertext='Transfer number' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="400" DelayMS="400" DisplayName="Type Into 'Search box'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[in_strSMN]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2e6a20ad-2414-490e-9150-3f51eaebba9f" InformativeScreenshot="b78aea02d45fdbc5b2b21938d8da2903" Selector="&lt;webctrl aaname='Transfer number' parentid='__FilterField_InventTransferJour_TransferId_TransferId_0' tag='DIV' /&gt;&lt;nav up='3' /&gt;&lt;webctrl id='*FilterField_InventTransferJour_TransferId*' tag='INPUT' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Typed into search box" />
+              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Apply'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="667557ca-7230-4c66-8c1d-f1518b4c6f9c" InformativeScreenshot="9e9a5137661caf031f237f06b156a9d0" Selector="&lt;webctrl id='__InventTransferJour_TransferId_ApplyFilters*' tag='SPAN' aaname='Apply' class='button-label' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Clicked apply" />
+            </Sequence>
+          </ActivityAction>
+        </ui:BrowserScope.Body>
+      </ui:BrowserScope>
+    </Sequence>
+    <Sequence DisplayName="PostCondition Check" sap:VirtualizedContainerService.HintSize="475.2,716.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Transfer order history -- Finance and Operations" sap:VirtualizedContainerService.HintSize="433.6,624" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="a0ed4d8c-a1eb-4910-b90d-5635ec3a50ae" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,407.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="strOutput" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <uix:NGetText DisplayName="Get Text 'SMN0011181'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a0ed4d8c-a1eb-4910-b90d-5635ec3a50ae" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://ax.production.carberyfoodingredients.com/namespaces/AXSF/?cmp=CFI&amp;mi=InventTransferJour" DesignTimeRectangle="189, 432, 174, 33" ElementType="InputBox" FriendlyName="'SMN0011181'" FullSelectorArgument="&lt;webctrl id='InventTransferJour_TransferId_3_0_input' tag='INPUT' aria-label='Transfer number' /&gt;" FuzzySelectorArgument="&lt;webctrl id='InventTransferJour_TransferId_3_0_input' tag='INPUT' aria-label='Transfer number' type='text' class='dyn-field dyn-hyperlink _uyeluk' /&gt;" Guid="27b4be39-c6ba-45f6-832a-9aece0bbf3ff" InformativeScreenshot="8f1328729adf77859bdb954bcf18c15e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Transfer order history -- Finance and Operations' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[strOutput]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <If Condition="[in_strSMN.trim.Equals(strOutput.trim)]" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="If_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,186.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;PostCondition met. &quot;+in_strSMN + &quot; has been searched successfully&quot;]" />
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="241.6,116" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw Exception="[new Exception(&quot;PostCondtion not met. &quot;+ in_strSMN + &quot; not first SMN in overview&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAsaSURBVFhH3ZhpUFXnGceFsKiAqHFF9vUCd+FyEZUdcQEESaJpvyR12mlNJ6ZJJ2mzGGsWjSamIsaVqLluMW2SZvIhq6KAuCY1Ghs6U6TKFgmCF3EDzrnvM/0/7zl3MRrHpMmXvDO/eRbOvc/vvOeec4EhP9uVFDTU1xISNCItZHikJWS4AdGCaEO0IZq5B6LAKD5Wf9lPv1KDhgUtCBubczrbtLCrYHJV1/SM+q5CWzPo+6bQ5uwqSFcRHaAZNIDqL7NMD/8qbEwmXjtCf5sffwX4+PisTozK/dhm2IShjRC69k1hukBOTGcBg1oic+rM1ylIHzyfb/3iQ2uSvTIxci7e68fd0e3G6HG1k5PtkGiD1ECnFJKDhR4JApCxCg2uNbjmnwGOyvk8a+cBW5Kd31N/+x++cJo+m5JjSjHojNcw74GEgYz42h3TSAN5rqwRJeSJFvF1juXMhqToUp6hj/t+K/gu34BlceHzMfQ/upAmpYmwhCbDA/X8PAQ6UHfkWlwyWp0DIe4hIpe1TtMLsWHzeZY+9s4Wn9WLsZPmnc9La+Sd8EgBDGQRTYAHazvDIlzrgzUJ1O1a7obr9mxXNFNHtrnxhZiJ877XTvLWd+RamzQJ3hEXGMIi+nANuUPeuAUhISABNBk3WSbRhqhhorYsU9PahIhSffztl90YMw5STRjMw1nCLebaDT3K3XH3eLAePcMloj3LLNqyWEyCHILIEd20ZJnOvJ446fY3jo+/712fZhjewSDt7LWBvAvugVx75/K4fJvoKMqkjqIpon3GVGpH3j49g9oLcVKFJka0FwCOoK1A9ohjW4ERtZEj1UyOtw/FM0jXuXlFLrRWvPpYXicLeYlo0euMW3kH+FLfX0o9Ly6mawc+pcH2VhKqSiScRAPd5OzZR+p/l5N6soLUY1bh5mgasJJE1rKHWtK25dmIHF3nxjUsMnRE0rJ8+4zqMrW2AmcvL4NbiKNom4Y4jc84Q3SvWEr9/zxOav8AXehz0skWhWr/PUh7/zVAp1oV6r0miJfz0ufkbFpM6vEpupyF1CNppBxBPGYRzqMWoSKX9VHL4JFtcZssCUODdS3PGlMUk2V9857T1t330AOvzKbmXJNohUwrpDQ450uRIRxVq4R6sYcGsWHvfd5Pj+y8TPev66OSVy/RrFWX6BfI//zWFXr3swEaUGA52EPOc3jN8UzImCHImIRyxAQpE3omCCKXtfGrh+4dfeMuBk4K8TWuL1mUtqtCAWTbXi52PThFtEw1Slq1SK1TU8WF554SSk8PXel3QuIq5S3vJdvSm8l4rpdy8TM+5iqOFYMXSW1eCgneQSOkjBA0Ik/lnHukHk7l+mrXvpSFpvhAz9fhsJjQUZYdc6vNO+eSRUPcs2a2OFloFuempJBGquiYX0LXTxzHrgh6Ys8Vsv7FIUnXcdXecP+JPZex24LEpWOknCgW6uEUyCQjSpCnyKjIHLEhqcpmGOr5xQKCUebt5Q3mHXPJvKOcTDvKxOStZfTyohzRNA1ymQCXt3vl8/Jz9c7xfspa5qC0JQACjJVzb1x9kI1j/4GPglMdINH0tHBKMQNkJJyDJAhqqIcT6yEYqetJQYNpe3kzJMm0vYwRTMWrM8W+OWnibGYyncu2iCs1n1DvVUGP67tngcidwMIP77hMXbiZRPcnwsmXmEUOSYR6KNEFBBOFcjih2WYITNL1IBgdajbZyx1G+xwy2cvICDnkwvLGHLH00WzRmJVCZ/PShdrdLe/W+17rJfOSixKLO7KMp+eScx1379peOoHXiust+JyZSTmUADkX8QwE3fESBC26nhS0Gd+Y4wQkgZyei6mbikXNLLM4m2/DI85JH58eoIIVDjI9qw3m6MLslX+7N+PlXtrfOIjnpApBPFYa4iTqoTgIyQhihdoQy7kTgjZdTxNM2VbqBJQKUraWEOdApGwrod8tzhNN+elCOFU5pOgVBxkXX9Tp0XHVt+7nv+SQJ8eCTn7ENMRAJhoRHIwh5G6UhigIBngEh0aHWiDSBzEI6YIaIlmD7Auy8W3RQifOKTR3jYNSMTQVAjdz634FLvEXfIn724hvEuVgFKlAORip5Q1Rgmv1YCT3HBA063oQjApNgkRz8pZiKZO8BWwtJsPWYmHgHupZVSXUengffXPJSQvtfXJoyi1IfsYTk/UeH/vY7su4wXCTXPgAOxcPqQjIREDGDQTDGVLqw3GT+Bt0PRYcEQmhehaEEAQh9zrYMlsgojdbpEJy1QcrRb8ySG9/1k8Zz+sSuog798KgRxuO/dux6/IR5Wx6CoK8a5qMR2oS8kmCo1IX1mBL8o/S7LAgGJJUXVyVVM1CsyHnQe/J/qy3fi2OdpySD91HdvdBoFtKeKIr96aH/oBj+eEueg8J52fZkJMiIAxSYUKtD9NyPToPhm2G4Ehdj7/qgnwNVbkLE6tnXQWCSdo8i5hEDa5FcnUJLa6tpO6rDvlVx4OtSzWpxKd19DwJpD/XLY/hr7rBgR663PgoDdRPhMQEyEyA2ASh1E3A7o1HzqCun6B0vT9qkSnG1/NVx2tkXnhO4uaZXwEhpTbNlCRwlL2ZgnPzljJ66fAm6r52Ue7KnqPXadGuPpqDG2fa8h7KXemgksqL9Nttl+jvx6/L3e655qC6U6voQl08Lt94SI3X4zgGuYwStW7s6YcqhmXpWp4VGB4cFPFU5muQ6JdSLLeRmQHJGQK5FOTatGUOPb5vBR3tOCk/Vw58+E+0DNKHp/pp71cD9PnZAXkz8eeVj1l58BVR+3EqRMZCYixHr3wMKbWAY90Y5ejmkXZLvN+t/8Af90ByVvzGGa1AAIrfADYWcS7iEFlO1huKZCx6cwE9W7uGPjpTT+19naTiOcm09HagV0d/qnmZCnc/SE++lSGu146BEJAyd2On7kZ+N+R06mTs3PJkULmuc/Py8fP1iVwy1Q4BKRG3HrhyGVm6SCB3xwT0UjYXk6l6Dpmry8nyOr4qN5eK5E3F8meWjQV0du9EodaOhpAEIqMh6MpHMchH0ck3Qu2BAfxH5W3WpN9bx8atn94Uu246BJki4twLEadHrjn3rvUoSVhfSBveNgjlwEhSa0cK9cBI5KGk1aGyj1rvhTa9v2z4WF3j9mv8gpTS2HWFkCx0SYFCillXKADnUoZrmb+GHohh+BgtF/duzSTHPuzO/lBSIaEeGAEZCeeQctdNu5YMu7M/O+XyGeIz+r74eTFrCxv1YRSztgDw8AKKXlugSyAij3b3cIzsFVLahlx6971o0b8/BILBIARCiB4gyTGosXJRwDxfzNSn39nyCbwrAJLzIdCE4SwgJW6IVflav+qGn4F88fhOo7iwF5dvf5AuyHE4QzI/gLwmqGn1wwHzQ4YP+X7/+nAvnNWYB5NLo6ryz0RhqEYBoRYshUjoyVrmayCMOHX9NPHRe2FisIZlXFIy6vkwUmqGn9n5jH8pHsc/7J9H3mvcb4zjJj6ZYY9ck98ZuSZPiazME4geuK7MI+QUW5UjntlhEL2fBkFkKHYpEDKBrtgPWk5uDbC/v9zv///32w3Lz8d39C8T547/o9UOmdNgMKIyVzCRq3MJkSLBlHVT6MsPcGPUBEAowBWvgsYjG/zXVj/hlxXo/yPs2nct/7CgEcFZE7PCX5y2CJLV4X/NbQhfndscsTrXAZwrdsU6B2v8+pQa/2ZlX0C9stdvbdeeYQsXlvnmWOJ8gvS3+emX/8Qg34CI4FH+4cFRwBAQHmxGtMXF+dlsiUMstkQfA4hCPsIU9a0v/p/PGjLkf4p6m3v0pTynAAAAAElFTkSuQmCC" InformativeScreenshot="c1ff5e8cbbf5f38603c0b46ac55e0b38.png" Selector="&lt;html app='chrome.exe' title='Transfer order history -- Finance and Operations' /&gt;" Url="[in_strTransferOrderHistoryURL]" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+    <ui:LogMessage DisplayName="Log End Message" sap:VirtualizedContainerService.HintSize="475.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Ending Component: &quot; + strComponentName]" />
+  </Sequence>
+</Activity>
